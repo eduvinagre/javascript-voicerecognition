@@ -15,6 +15,8 @@ function validaChute(chute) {
     document.body.innerHTML = `
     <h2>Você acertou!</h2>
     <h3>O número da sorte era ${numeroSecreto}
+
+    <div><button id=novamente class=jogar>Jogar novamente</button></div>
     `;
   } else if (numero > numeroSecreto) {
     elementoChute.innerHTML += `<div>
@@ -34,3 +36,9 @@ function chuteInvalido(numero) {
 function valorMaiorMenor(numero) {
   return numero > maiorValor || numero < menorValor;
 }
+
+document.body.addEventListener("click", (e) => {
+  if (e.target.id == "novamente") {
+    window.location.reload();
+  }
+});
