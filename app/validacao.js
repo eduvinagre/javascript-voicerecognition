@@ -18,6 +18,10 @@ function validaChute(chute) {
     `;
   } else if (numero > numeroSecreto) {
     elementoChute.innerHTML += `<div>
+        O número secreto é menor <i class="fa-solid fa-arrow-down-long"></i>
+      </div>`;
+  } else {
+    elementoChute.innerHTML += `<div>
         O número secreto é maior <i class="fa-solid fa-arrow-up-long"></i>
       </div>`;
   }
